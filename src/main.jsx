@@ -1,13 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-const container = document.createElement('div')
-container.id = 'my-widget-root'
-document.body.appendChild(container)
+const App = () => {
+  return (
+    <div style={{ background: '#eee', padding: '20px' }}>
+      <h1>이건 CDN으로 불린 컴포넌트입니다.</h1>
+    </div>
+  );
+};
 
-ReactDOM.createRoot(container).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+const root = document.createElement('div');
+document.body.appendChild(root);
+ReactDOM.createRoot(root).render(<App />);

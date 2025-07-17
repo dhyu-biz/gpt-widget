@@ -11,11 +11,9 @@ export default defineConfig({
       formats: ['iife'], // 하나의 JS 파일로 빌드
     },
     rollupOptions: {
+      external: [],
       output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
+        globals: {},
       },
     },
   },
