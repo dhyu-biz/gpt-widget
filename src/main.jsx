@@ -1,14 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-const App = () => {
-  return (
-    <div style={{ background: '#eee', padding: '20px' }}>
-      <h1>이건 CDN으로 불린 컴포넌트입니다.</h1>
-    </div>
-  );
+function mount() {
+  const container = document.createElement("div");
+  container.id = "my-widget-root";
+  document.body.appendChild(container);
+
+  const root = ReactDOM.createRoot(container);
+  root.render(<App />);
+}
+
+window.MyWidget = {
+  mount,
 };
-
-const root = document.createElement('div');
-document.body.appendChild(root);
-ReactDOM.createRoot(root).render(<App />);

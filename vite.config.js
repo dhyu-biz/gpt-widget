@@ -8,10 +8,10 @@ export default defineConfig({
       entry: 'src/main.jsx',
       name: 'MyWidget',
       fileName: 'my-widget',
-      formats: ['iife'], // 하나의 JS 파일로 빌드
+      formats: ['iife'],
     },
     rollupOptions: {
-      external: [],
+      external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
